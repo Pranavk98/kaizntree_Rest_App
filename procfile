@@ -1,1 +1,1 @@
-web: gunicorn kaizntreeapp.wsgi:application
+web: gunicorn Kaizntree_Backend.wsgi:application
