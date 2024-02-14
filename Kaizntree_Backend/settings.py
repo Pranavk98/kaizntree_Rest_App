@@ -147,3 +147,9 @@ REST_FRAMEWORK = {
     ],
     # Other settings...
 }
+
+import os
+
+# At the bottom of settings.py
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
