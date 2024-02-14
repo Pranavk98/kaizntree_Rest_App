@@ -1,4 +1,4 @@
-#!/usr/bin/env pythonn
+#!/usr/bin/env pythonnpush 
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
