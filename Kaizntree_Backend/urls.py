@@ -24,7 +24,6 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # Include dashboard app's URLs with a prefix, e.g., 'api/dashboard/'
     path('api/dashboard/', include('dashboard.urls')),  # Adjust as needed
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),

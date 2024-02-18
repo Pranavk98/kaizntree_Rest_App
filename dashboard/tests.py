@@ -31,14 +31,14 @@ class ItemAPITests(APITestCase):
             "name": "Microphone",
             "stock_status": "Out of Stock",
             "available_stock": 0,
-            "category_id": self.category.id,  # Now passing category_id
+            "category_id": self.category.id,  
         }
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Item.objects.count(), 2)
         item = Item.objects.latest('id')
         self.assertEqual(item.name, "Microphone")
-        self.assertEqual(item.category, self.category)  # Verifying category was set correctly
+        self.assertEqual(item.category, self.category) 
 
 
     def test_get_item_list(self):
@@ -48,7 +48,7 @@ class ItemAPITests(APITestCase):
         url = reverse('item-list')
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 1)  # Assuming no pagination
+        self.assertEqual(len(response.data), 1)  
 
     def test_filter_items_by_stock_status(self):
         """
