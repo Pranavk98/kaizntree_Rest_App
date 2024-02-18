@@ -1,7 +1,9 @@
 API Documentation
+
 Base URL
 
 https://kaizntreeapp-831ad391a3c2.herokuapp.com/admin/login/?next=/admin/  
+
 Authentication
 
 A super user is created use  username - root password - root  This will help in administrator logging in moving forward more users and items can be created for testing the application
